@@ -1,7 +1,7 @@
 # DeepInto_ECMAScript_and_TypeScript
 1. 深入 ES 规范，通过对规范的解析来解释 JS 代码的执行过程；2. TS 新特性的讲解及新特性到 JS 的转译
 
-该系列主要包括两个部分：ECMAScript 规范的解析 和 TypeScript 中特性的概念/转译
+该系列主要包括两个部分：[ECMAScript 规范解析](https://shadowkimi520.github.io/DeepInto_ECMAScript_and_TypeScript/DeepInto_ECMAScript/) 和 [TypeScript 特性转译](https://shadowkimi520.github.io/DeepInto_ECMAScript_and_TypeScript/TypeScript_Transpiling/)
 
 * 第一部分尝试通过对 ECMAScript 规范的解析来理解 JS 代码的执行过程，计划涉及：
 > 1. JS中的变量/值/类型：首先从语言的层面讲解 JS 的基本数据类型（原始类型和对象类型），然后深入规范讨论下这些类型在底层是如何表示的；JS中操作数的隐式类型转换（针对各元算符，涉及ToPrimitive/ToNumber/ToString/ToObject/ToBoolean等抽象操作，ToPrimitive操作的meta programming）；String/Number/Boolean的显示类型转换及对应的包装类型对象；call-by-value/call-by-reference/call-by-share；
@@ -16,3 +16,17 @@
 > 1. ES 规范中不大可能加入的 TS 独有特性，比如 类型声明 / 接口。 这部分在TS中变化不大，无论转译目标是什么版本的ES，这部分代码都要进行转译。
 > 2. 目前版本的ES中没有，但后续版本极有可能添加的新特性。这一部分如果转译目标为原生支持该特性的环境则转译过程中不对其进行任何修改；如果转译目标为不支持该特性的环境，可以根据当前环境支持的特性来生成模拟代码，从而在不支持该特性的环境中使用该新特性。
 > 3. 最新版本的ES中已经存在，但是浏览器还没有广泛实现的特性。这就是第二点中所说的：转译目标不支持该特性的情况，此时生成模拟代码即可；后续随着宿主环境都开始支持该特性，改变转译目标选项就可以保留原有代码，不需要转译成模拟代码。
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script>
+hljs.configure({
+  languages: ['cs']
+})
+hljs.initHighlightingOnLoad();
+</script>
